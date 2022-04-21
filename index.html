@@ -1,17 +1,57 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-  <title>Hanoijs</title>
-  <meta charset="utf-8">
-  <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
-  <link rel="stylesheet" href="css/style.css" />
-  <script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Sliding Tile Puzzle</title>
 </head>
-<body>
-    <p class=""> OI BRuna GOstosa</p>
 
-    <a href="Hanoijs.html" class=""> JOGAR</a>
+<body onload="setUp(1)">
+    <h1>Software Educacional - QPS</h1>
+    <h3>Resolva o puzzle completando a frase para desbloquear o conteúdo.<h3>
+    <div id="modal" class="hide">
+        <div id="header"><button id="closeBtn" onclick="hideModal()">x</button></div>
+        <h1 id="message"></h1>
+    </div>
 
-    <a href="" class=""></a>
+    
+    <div id="phaseButtons" style="display:flex; text-align:center; ">
+        <button onclick="setUp(1)"> Fase 1 </button>
+        <button onclick="setUp(2)"> Fase 2</button>
+        <button onclick="setUp(3)"> Fase 3</button>
+        <button onclick="setUp(4)"> Fase 4</button>
+        <button onclick="setUp(5)"> Fase 5</button>
+    </div>
+    <div class="tooltip" style="margin-top:10px">Dica
+        <br/>
+        <br/>
+
+        <span class="tooltiptext">Arraste um quadrado horizontalmente ou verticalmente para o quadrado vazio.</span>
+    </div>
+    
+    <div id="PhaseNumber"><h4> Fase: </h4></div>
+    
+    <div id="container">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
 </body>
+<script src="js/script.js"></script>
+
 </html>
